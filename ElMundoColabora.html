@@ -1,0 +1,27 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body style="text-align:center;">
+  <h1 > Países que colaboran con la obra social de ACOES en Honduras. </h1>
+  <h2 > Datos de 2014 </h2>
+  <h3> <a href="https://www.acoes.org"> Arendiendo a compartir. </a> </h3>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+  <div id="regions_div" style="width: 900px; height: 500px; margin: 0 auto;"></div>
+   
+</body>
+
+<script type="text/javascript">
+      google.charts.load('current', {'packages':['geochart']});
+      google.charts.setOnLoadCallback(drawRegionsMap);
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'Donation'],
+          ['Spain', € 3.000.000,00], ['Canada', 137], ['Rome', 8], ['USA', 9], ['France', 1]
+        ]);
+         var options = {colorAxis: {colors: ['#009de0', '#4cbae9', '#b2e1f5']}};
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+        chart.draw(data, options);
+      }
+</script>
